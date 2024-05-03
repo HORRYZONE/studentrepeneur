@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('donation-display');
+    return view('fund-form');
 });
 
 Route::middleware([

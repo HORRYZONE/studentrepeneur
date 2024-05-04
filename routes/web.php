@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('fund-form');
+    return view('registration');
 });
 
 Route::middleware([
@@ -15,3 +15,10 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::post('/registration', 'RegistrationController@store')->name('registration.store');
+
+
+Route::get('/registration-2', function () {
+    return view('registration-2');
+})->name('registration-2');

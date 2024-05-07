@@ -126,6 +126,50 @@
             /* Adjust the color as needed */
             border-radius: 5px;
         }
+
+        .card-profile {
+            margin-top: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .profile .details {
+            text-align: left;
+        }
+
+        .profile .details h2 {
+            margin: 5px 0;
+            font-size: 14px;
+            color: #6941C6;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+        }
+
+        .profile .details p {
+            margin: 0;
+            font-size: 14px;
+            color: #667085;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+        }
+        
     </style>
 </head>
 
@@ -151,27 +195,91 @@
                         <img src="images/redirect.svg" alt="Redirect">
                     </div>
                     <h3>Design Web Sites and Mobile Apps that Your Users Love and Return to Again.</h3>
-                    <div class="progress-bar"></div>
-                    <div>
-                        <div class="profile-picture">
 
+                    <div class="progress-bar"></div>
+
+                    <div class="card-profile">
+                        <div class="profile">
+                            <img src="images/Dann-pic.jpg" alt="Profile Picture">
+                            <div class="details">
+                            <h2>John Doe</h2>
+                            <p>Software Engineer</p>
+                            </div>
                         </div>
-                        <div class="profiles">
-                            <div class="profile-name"></div>
-                            <div class="profile-support"></div>
+
+                        <div class="fund">
+                        <h1>RM 10000</h1>
                         </div>
-                        <div class="fund"></div>
                     </div>
                 </div>
             </div>
+            
             <div class="card">
-                <h2>Card 2</h2>
-                <p>This is the content of Card 2.</p>
+                <div class="image-container">
+                    <div class="images">
+                        <img src="images/card-image-1.png" alt="card-image">
+                    </div>
+                </div>
+
+                <div class="card-detail">
+                    <h2>Design</h2>
+                    <div class="card-title">
+                        <h1>Learn With Shoaib</h1>
+                        <img src="images/redirect.svg" alt="Redirect">
+                    </div>
+                    <h3>Design Web Sites and Mobile Apps that Your Users Love and Return to Again.</h3>
+
+                    <div class="progress-bar"></div>
+
+                    <div class="card-profile">
+                        <div class="profile">
+                            <img src="images/Dann-pic.jpg" alt="Profile Picture">
+                            <div class="details">
+                            <h2>John Doe</h2>
+                            <p>Software Engineer</p>
+                            </div>
+                        </div>
+
+                        <div class="fund">
+                        <h1>RM 10000</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
+
             <div class="card">
-                <h2>Card 3</h2>
-                <p>This is the content of Card 3.</p>
+                <div class="image-container">
+                    <div class="images">
+                        <img src="images/card-image-1.png" alt="card-image">
+                    </div>
+                </div>
+
+                <div class="card-detail">
+                    <h2>Design</h2>
+                    <div class="card-title">
+                        <h1>Learn With Shoaib</h1>
+                        <img src="images/redirect.svg" alt="Redirect">
+                    </div>
+                    <h3>Design Web Sites and Mobile Apps that Your Users Love and Return to Again.</h3>
+
+                    <div class="progress-bar"></div>
+
+                    <div class="card-profile">
+                        <div class="profile">
+                            <img src="images/Dann-pic.jpg" alt="Profile Picture">
+                            <div class="details">
+                            <h2>John Doe</h2>
+                            <p>Software Engineer</p>
+                            </div>
+                        </div>
+
+                        <div class="fund">
+                        <h1>RM 10000</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
+            
         </div>
     </div>
 

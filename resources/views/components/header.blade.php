@@ -4,6 +4,14 @@
 <head>
     <title></title>
     <style>
+        /* CSS styles for the footer */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
         body {
             background-color: #F9FAFB;
         }
@@ -47,7 +55,7 @@
             /* Center align the items vertically */
             margin-right: 10px;
             width: 370px;
-            height: 35px;
+            height: 50px;
             border-radius: 8px;
             padding: 10px;
             background-color: #FFFFFF;
@@ -94,7 +102,7 @@
             align-items: center;
         }
 
-        .register-button{
+        .register-button {
             background-color: #15B097;
             height: 45px;
             width: 165px;
@@ -105,6 +113,7 @@
             font-size: 16px;
             font-weight: normal;
         }
+
         .login-button {
             margin-left: 5px;
             background-color: #F9FAFB;

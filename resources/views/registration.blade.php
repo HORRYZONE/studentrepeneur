@@ -7,14 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Registration Form in HTML CSS</title>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+  <!-- Google Fonts  -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet" />
   <!---Custom CSS File--->
   <link rel="stylesheet" href="/css/registration.css" />
+  <link rel="stylesheet" href="/css/registration_2.css" />
+
 </head>
 
 <body>
   <section class="container">
     <header>Registration Form</header>
-    <form action="{{ route('registration.store') }}" class="form" method="POST">
+    <form action="{{ route('registration.store') }}" class="form">
       @csrf
       <div class="input-box">
         <label>Full Name</label>
@@ -22,25 +28,26 @@
       </div>
 
       <div class="input-box">
-        <label>Business Name</label>
-        <input type="text" name="business_name" placeholder="Enter business name" required />
-      </div>
-
-      <div class="input-box">
         <label>Matric Number</label>
         <input type="text" name="matric_number" placeholder="Enter matric number" required />
       </div>
 
-      <div class="column">
-        <div class="input-box">
-          <label>Phone Number</label>
-          <input type="number" name="phone_number" placeholder="Enter phone number" required />
+
+      <div class="input-box address">
+        <label>Matric card picture</label>
+        <div class="container">
+          <input type="file" id="file-input" multiple />
+          <label for="file-input">
+            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            &nbsp; Choose Files To Upload
+          </label>
+          <div id="num-of-files">No Files Choosen</div>
+          <ul id="files-list"></ul>
         </div>
-        <div class="input-box">
-          <label>Birth Date</label>
-          <input type="date" name="birth_date" placeholder="Enter birth date" required />
-        </div>
+
       </div>
+
+
       <div class="gender-box">
         <h3>Gender</h3>
         <div class="gender-option">
@@ -54,6 +61,7 @@
           </div>
         </div>
       </div>
+
       <div class="input-box address">
         <label>Address</label>
         <input type="text" name="address1" placeholder="Enter street address" required />
@@ -75,10 +83,33 @@
           <input type="number" name="postal_code" placeholder="Enter postal code" required />
         </div>
       </div>
-        <a href="registration-2" class="nextBtn">Next</a>
+      <a href="registration-2" class="nextBtn">Next</a>
 
     </form>
   </section>
 </body>
+<script>
+  let fileInput = document.getElementById("file-input");
+let fileList = document.getElementById("files-list");
+let numOfFiles = document.getElementById("num-of-files");
+
+fileInput.addEventListener("change", () => {
+  fileList.innerHTML = "";
+  numOfFiles.textContent = `${fileInput.files.length} Files Selected`;
+
+  for (i of fileInput.files) {
+    let reader = new FileReader();
+    let listItem = document.createElement("li");
+    let fileName = i.name;
+    let fileSize = (i.size / 1024).toFixed(1);
+    listItem.innerHTML = `<p>${fileName}</p><p>${fileSize}KB</p>`;
+    if (fileSize >= 1024) {
+      fileSize = (fileSize / 1024).toFixed(1);
+      listItem.innerHTML = `<p>${fileName}</p><p>${fileSize}MB</p>`;
+    }
+    fileList.appendChild(listItem);
+  }
+});
+</script>
 
 </html>

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegistrationControllerController;
+
 
 Route::get('/', function () {
     return view('registration');

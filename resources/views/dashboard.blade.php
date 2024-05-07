@@ -19,6 +19,10 @@
         @include('components/header')
     </div>
 
+    <div class="header">
+        @include('highlights')
+    </div>
+
     <div class="footer">
         @include('components/footer')
     </div>

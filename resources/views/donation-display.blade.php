@@ -1,84 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Image Carousel</title>
-    <style>
-        body {
-	background-color: #f8fafc;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.container {
-	padding: 2rem;
-}
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="css/donation-display.css">
 
-.slider-wrapper {
-	position: relative;
-	max-width: 48rem;
-	margin: 0 auto;
-}
-
-.slider {
-	display: flex;
-	aspect-ratio: 16 / 9;
-	overflow-x: auto;
-	scroll-snap-type: x mandatory;
-	scroll-behavior: smooth;
-	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-	border-radius: 0.5rem;
-	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
-	scrollbar-width: none; /* Hide scrollbar Firefox */
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.slider::-webkit-scrollbar {
-	display: none;
-}
-
-.slider img {
-	flex: 1 0 100%;
-	scroll-snap-align: start;
-	object-fit: cover;
-}
-
-.slider-nav {
-	display: flex;
-	column-gap: 1rem;
-	position: absolute;
-	bottom: 1.25rem;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 1;
-}
-
-.slider-nav a {
-	width: 0.5rem;
-	height: 0.5rem;
-	border-radius: 50%;
-	background-color: #fff;
-	opacity: 0.75;
-	transition: opacity ease 250ms;
-}
-
-.slider-nav a:hover {
-	opacity: 1;
-}
-
-    </style>
+    <title>Landscape responsive card - Bedimcode</title>
 </head>
+
 <body>
-<section class="container">
-	<div class="slider-wrapper">
-		<div class="slider">
-			<img id="slide-1" src="https://images.unsplash.com/photo-1656464868371-602be27fd4c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" alt="3D rendering of an imaginary orange planet in space" />
-			<img id="slide-2" src="https://images.unsplash.com/photo-1657586640569-4a3d4577328c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" alt="3D rendering of an imaginary green planet in space" />
-			<img id="slide-3" src="https://images.unsplash.com/photo-1656077217715-bdaeb06bd01f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80" alt="3D rendering of an imaginary blue planet in space" />
-		</div>
-		<div class="slider-nav">
-			<a href="#slide-1"></a>
-			<a href="#slide-2"></a>
-			<a href="#slide-3"></a>
-		</div>
-	</div>
-</section>
+
+    <div class="header">
+        @include('components/header')
+    </div>
+
+    <div class="container">
+        <div class="card__container">
+            <article class="card__article">
+                <img src="images/landscape-1.png" alt="image" class="card__img">
+
+                <div class="card__data">
+                    <span class="card__description">Fashion</span>
+                    <h2 class="card__title">Ratna Hijab</h2>
+                    <a href="#" class="card__button">Read More</a>
+                </div>
+            </article>
+
+            <article class="card__article">
+                <img src="images/landscape-2.png" alt="image" class="card__img">
+
+                <div class="card__data">
+                    <span class="card__description">Poon Hill, Nepal</span>
+                    <h2 class="card__title">Starry Night</h2>
+                    <a href="#" class="card__button">Read More</a>
+                </div>
+            </article>
+
+            <article class="card__article">
+                <img src="images/landscape-3.png" alt="image" class="card__img">
+
+                <div class="card__data">
+                    <span class="card__description">Bojcin Forest, Serbia</span>
+                    <h2 class="card__title">Path Of Peace</h2>
+                    <a href="#" class="card__button">Read More</a>
+                </div>
+            </article>            
+        </div>
+        
+        <div class="card__container">
+            <article class="card__article">
+                <img src="images/landscape-1.png" alt="image" class="card__img">
+
+                <div class="card__data">
+                    <span class="card__description">Fashion</span>
+                    <h2 class="card__title">Ratna Hijab</h2>
+                    <a href="#" class="card__button">Read More</a>
+                </div>
+            </article>
+
+            <article class="card__article">
+                <img src="images/landscape-2.png" alt="image" class="card__img">
+
+                <div class="card__data">
+                    <span class="card__description">Poon Hill, Nepal</span>
+                    <h2 class="card__title">Starry Night</h2>
+                    <a href="#" class="card__button">Read More</a>
+                </div>
+            </article>
+
+            <article class="card__article">
+                <img src="images/landscape-3.png" alt="image" class="card__img">
+
+                <div class="card__data">
+                    <span class="card__description">Bojcin Forest, Serbia</span>
+                    <h2 class="card__title">Path Of Peace</h2>
+                    <a href="#" class="card__button">Read More</a>
+                </div>
+            </article>            
+        </div>
+
+        <div class="card__container">
+            <article class="card__article">
+                <img src="images/landscape-1.png" alt="image" class="card__img">
+
+                <div class="card__data">
+                    <span class="card__description">Fashion</span>
+                    <h2 class="card__title">Ratna Hijab</h2>
+                    <a href="#" class="card__button">Read More</a>
+                </div>
+            </article>
+
+            <article class="card__article">
+                <img src="images/landscape-2.png" alt="image" class="card__img">
+
+                <div class="card__data">
+                    <span class="card__description">Poon Hill, Nepal</span>
+                    <h2 class="card__title">Starry Night</h2>
+                    <a href="#" class="card__button">Read More</a>
+                </div>
+            </article>
+
+            <article class="card__article">
+                <img src="images/landscape-3.png" alt="image" class="card__img">
+
+                <div class="card__data">
+                    <span class="card__description">Bojcin Forest, Serbia</span>
+                    <h2 class="card__title">Path Of Peace</h2>
+                    <a href="#" class="card__button">Read More</a>
+                </div>
+            </article>            
+        </div>
+        
+    </div>
+    
+    <div class="footer">
+        @include('components/footer')
+    </div>
 </body>
+
 </html>

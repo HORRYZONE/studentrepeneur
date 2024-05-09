@@ -17,7 +17,7 @@
         @include('components/header')
     </div>
 
-    <div class="container">
+    <div class="donation-container">
         <div class="card__container">
             <article class="card__article">
                 <img src="images/landscape-1.png" alt="image" class="card__img">

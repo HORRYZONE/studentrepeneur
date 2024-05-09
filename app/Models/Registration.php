@@ -8,10 +8,7 @@ class Registration extends Model
 {
     protected $fillable = [
         'full_name',
-        'business_name',
         'matric_number',
-        'phone_number',
-        'birth_date',
         'gender',
         'address1',
         'address2',

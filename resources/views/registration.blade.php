@@ -20,7 +20,7 @@
 <body>
   <section class="container">
     <header>Registration Form</header>
-    <form action="{{ route('registration.store') }}" class="form">
+    <form class="form" action="{{ route('registration-form') }}" method="POST">
       @csrf
       <div class="input-box">
         <label>Full Name</label>
@@ -83,8 +83,7 @@
           <input type="number" name="postal_code" placeholder="Enter postal code" required />
         </div>
       </div>
-      <a href="registration-2" class="nextBtn">Next</a>
-
+      <button type="submit">Next</button>
     </form>
   </section>
 </body>

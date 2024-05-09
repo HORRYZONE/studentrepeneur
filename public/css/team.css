@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .team-hero {
+    background-color: var(--primary-color);
+    min-height: 100vh;
+    width: 100%; /* Set the width to 100% */
+    display: flex; /* Add flex display */
+  flex-direction: column; /* Arrange items vertically */
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  }
+
+  .row-team {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 1em;
+    text-align: center;
+  }
+  .column-team {
+    width: 100%;
+    padding: 0.5em 0;
+  }
+  .row-team h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 3.5em;
+    color: #1f003b;
+  }
+  .card-team {
+    box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
+    padding: 3.5em 1em;
+    border-radius: 0.6em;
+    width: 500px;
+    color: #1f003b;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #ffffff;
+  }
+  .card-team .img-container {
+    width: 8em;
+    height: 8em;
+    background-color: #93fff6;
+    padding: 0.5em;
+    border-radius: 50%;
+    margin: 0 auto 2em auto;
+  }
+
+  .img-container img {
+    width: 100%; /* Make the image fill the container width */
+    height: 100%; /* Make the image fill the container height */
+    object-fit: cover; /* Crop the image to fit the container */
+    object-position: center; /* Center the image within the container */
+  }
+
+  .card-team img {
+    width: 100%;
+    border-radius: 50%;
+  }
+  .card-team h3 {
+    font-weight: 500;
+  }
+  .card-team p {
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 0.5em 0 2em 0;
+    letter-spacing: 2px;
+  }
+  .icons {
+    width: 50%;
+    min-width: 180px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .card-team a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.4em;
+  }
+  .card-team:hover {
+    background: linear-gradient(#45eacf, #67f7af);
+    color: #ffffff;
+  }
+  .card-team:hover .img-container {
+    transform: scale(1.15);
+  }
+
+  .team-hero span {
+    color: #003b19;
+    font-style: italic; /* Add italic style */
+    font-weight: normal; /* Add bold weight */
+    font-size: 24px;
+  }
+
+  @media screen and (min-width: 768px) {
+   
+  }
+  @media screen and (min-width: 992px) {
+
+    .card-team {
+      padding: 5em 1em;
+    }
+    .column-team {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+      padding: 0 1em;
+    }
+  }

@@ -5,7 +5,7 @@
     <title>Your Website</title>
     <style>
         body {
-            background-color: #F4F4F4;
+            background-color: #F9FAFB;
             display: flex;
             flex-direction: column;
         }
@@ -19,8 +19,16 @@
         @include('components/header')
     </div>
 
-    <div class="header">
+    <div>
+        @include('section-1')
+    </div>
+
+    <div>
         @include('highlights')
+    </div>
+
+    <div>
+        @include('team')
     </div>
 
     <div class="footer">

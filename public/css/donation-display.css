@@ -13,7 +13,7 @@
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
-  --body-font: "Poppins", sans-serif;
+  --body-font: "Roboto", sans-serif;
   --h2-font-size: 1.25rem;
   --small-font-size: .813rem;
 }
@@ -39,14 +39,10 @@ body {
   color: var(--text-color);
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
+
 
 /*=============== CARD ===============*/
-.container {
+.donation-container {
   display: grid;
   place-items: center;
   margin-inline: 1.5rem;

@@ -1,0 +1,356 @@
+/* CSS styles for the footer */
+
+:root {
+    --primary-color: #f1eee9;
+    --secondary-color: #15B097;
+    --tertiary-color: #f9d678;
+    --text-dark: #13313c;
+    --text-light: #475569;
+    --white: #ffffff;
+    --max-width: 1200px;
+    --header-font: "Roboto", sans-serif;
+  }
+  
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+
+.nav__logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
+.search-container {
+    display: flex;
+    flex-direction: row;
+    /* Change flex-direction to row */
+    align-items: center;
+    /* Center align the items vertically */
+    margin-right: 10px;
+    width: 370px;
+    height: 50px;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    border: 1px solid #D0D5DD;
+    position: relative;
+}
+
+.search-icon {
+    margin-right: 10px;
+}
+
+.search-text {
+    margin-bottom: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.search-input {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.explore-button {
+    margin-left: 10px;
+    background-color: #EAFBF0;
+    border-radius: 8px;
+    border: none;
+    width: 125px;
+    height: 35px;
+    padding: 6px 12px;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #15B097;
+}
+
+.auth-container {
+    display: flex;
+    align-items: center;
+}
+
+
+nav {
+    position: fixed;
+    isolation: isolate;
+    width: 100%;
+    z-index: 9;
+}
+
+.nav__header {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--text-dark);
+}
+
+
+.nav__menu__btn {
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.nav__links {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: var(--text-dark);
+    transition: 0.5s;
+    z-index: -1;
+    transform: translateY(-100%);
+}
+
+.nav__links.open {
+    transform: translateY(0);
+}
+
+.nav__links a {
+    font-weight: 500;
+    color: var(--white);
+    transition: 0.3s;
+}
+
+.nav__links a:hover {
+    color: var(--secondary-color);
+}
+
+.nav__btns {
+    display: none;
+}
+
+
+@media (width > 768px) {
+    nav {
+        background-color: #F9FAFB;
+        padding: 20px;
+        position: static;
+        padding-inline: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .nav__header {
+        flex: 1;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .nav__logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav__logo button {
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+
+    .logo-name-container {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+
+    .logo {
+        margin-right: 10px;
+        width: max-content;
+    }
+
+    .name {
+        font-size: 20px;
+        font-weight: bold;
+        width: max-content;
+    }
+
+    .search-container {
+        display: flex;
+        flex-direction: row;
+        /* Change flex-direction to row */
+        align-items: center;
+        /* Center align the items vertically */
+        margin-left: 10px;
+        margin-right: 10px;
+        width: 370px;
+        height: 50px;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #FFFFFF;
+        border: 1px solid #D0D5DD;
+        position: relative;
+    }
+
+    .search-icon {
+        margin-right: 10px;
+        width: max-content;
+    }
+
+    .search-text {
+        margin-bottom: 10px;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .search-input {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+
+    .explore-button {
+        margin-left: 10px;
+        background-color: #EAFBF0;
+        border-radius: 8px;
+        border: none;
+        width: 125px;
+        height: 35px;
+        padding: 6px 12px;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        color: #15B097;
+    }
+
+
+    .nav__menu__btn {
+        display: none;
+    }
+
+    .nav__links {
+        position: static;
+        padding: 0;
+        flex-direction: row;
+        background-color: transparent;
+        transform: none;
+    }
+
+    .nav__links a {
+        padding-block: 5px;
+        color: var(--text-light);
+        border-bottom: 2px solid transparent;
+    }
+
+    .nav__links a:hover {
+        border-color: var(--secondary-color);
+    }
+
+    .nav__btns {
+        display: flex;
+        flex: 1;
+    }
+
+    .nav__btns .btn {
+        padding: 0.75rem 2rem;
+        outline: none;
+        border: none;
+        font-size: 1rem;
+        font-weight: 600;
+        white-space: nowrap;
+        color: var(--text-dark);
+        background-color: var(--tertiary-color);
+        border-radius: 5rem;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
+    .nav__btns .btn:hover {
+        color: var(--white);
+        background-color: var(--secondary-color);
+    }
+
+    a {
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .register-button {
+        background-color: #15B097;
+        height: 45px;
+        width: 165px;
+        border-radius: 50px;
+        border: none;
+        color: #F5F9F9;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+    .register-button:hover {
+        background-color: #F5F9F9;
+        color: #15B097;
+        height: 45px;
+        width: 165px;
+        border-radius: 50px;
+        background-color: #F5F9F9;
+        border: 2px solid #15B097;
+        color: #15B097;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+
+    .login-button {
+        margin-left: 5px;
+        background-color: #F9FAFB;
+        border: none;
+        width: 125px;
+        height: 35px;
+        padding: 6px 12px;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+        color: #15B097;
+    }
+
+    .login-button:hover {
+        background-color: #F5F9F9;
+        color: #15B097;
+        width: 125px;
+        height: 35px;
+        border-radius: 50px;
+        background-color: #F5F9F9;
+        border: 2px solid #15B097;
+        color: #15B097;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        font-weight: normal;
+    }
+
+}

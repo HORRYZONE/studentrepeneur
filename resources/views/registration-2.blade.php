@@ -20,7 +20,7 @@
 
   <section class="container">
     <header>Registration Form</header>
-    <form action="{{ route('registration.store') }}" class="form">
+    <form class="form" action="{{ route('registration-form') }}" method="POST">
       @csrf
 
       <div class="input-box">
